@@ -1,2 +1,30 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Ignore image assets (PNG, JPG, etc.)
+assets/* linguist-detectable=false
+*.png linguist-detectable=false
+*.jpg linguist-detectable=false
+*.jpeg linguist-detectable=false
+*.gif linguist-detectable=false
+*.svg linguist-detectable=false
+
+# Ignore Docker, lock files, and configs
+*.lock linguist-detectable=false
+Dockerfile linguist-detectable=false
+docker-compose.yml linguist-detectable=false
+
+# Ignore JSON files (usually config, not code)
+*.json linguist-detectable=false
+
+# Ignore Markdown and documentation
+*.md linguist-documentation
+docs/* linguist-documentation
+
+# Treat all .js and .jsx files as JavaScript
+*.js linguist-language=JavaScript
+*.jsx linguist-language=JavaScript
+
+# Treat all .ts/.tsx as TypeScript (if you ever add TS)
+*.ts linguist-language=TypeScript
+*.tsx linguist-language=TypeScript
+
+# Include CSS and Tailwind
+*.css linguist-language=CSS
